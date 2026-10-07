@@ -1,0 +1,33 @@
+.card {
+  border-radius: 1rem;
+  padding: 3rem 1rem;
+  text-align: start;
+  max-width: 420px;
+  width: 100%;
+}
+
+/* Title */
+.title {
+  font-family: var(--font-trajanpro);
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+}
+
+.description {
+    font-family: var(--font-sora);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin: 0 auto;
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 2.25rem 1.75rem;
+  }
+
+  .title {
+    font-size: 1rem;
+  }
+}

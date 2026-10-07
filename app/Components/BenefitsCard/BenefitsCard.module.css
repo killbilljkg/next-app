@@ -1,0 +1,45 @@
+.card {
+  border-radius: 1rem;
+  padding: 3rem 1rem;
+  text-align: center;
+  max-width: 420px;
+  width: 100%;
+}
+
+/* Number */
+.number {
+  display: block;
+  font-family: var(--font-trajanpro);
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Title */
+.title {
+  font-family: var(--font-trajanpro);
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+}
+
+.description {
+    font-family: var(--font-sora);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin: 0 auto;
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 2.25rem 1.75rem;
+  }
+
+  .number {
+    font-size: 1.5rem;
+  }
+
+  .title {
+    font-size: 1rem;
+  }
+}

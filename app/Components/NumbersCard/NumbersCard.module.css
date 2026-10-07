@@ -1,0 +1,81 @@
+/* .Card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.cardheading {
+    font-family: var(--font-trajanpro);
+    font-weight: 700;
+    font-size: 4rem;
+    color: #4E8B13;
+    line-height: 3rem;
+}
+
+.cardDesc {
+    font-family: var(--font-sora);
+    font-weight: 400;
+    font-size: 1rem;
+    color: #111;
+    line-height: 1rem;
+    letter-spacing: 1;
+} */
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem 2rem;
+  border-radius: 24px;
+  background-color: #f7f7f4;
+  text-align: center;
+  background: radial-gradient(
+    120% 120% at top left,
+  rgba(0, 0, 0, 0.0),
+  rgba(9, 9, 9, 0.15)
+  );
+
+}
+
+/* BIG NUMBER */
+.cardHeading {
+  font-family: var(--font-trajanpro);
+  font-weight: 700;
+  font-size: clamp(3rem, 4vw, 4.2rem);
+  line-height: 1;
+  color: #4e8b13;
+  margin-bottom: 1rem;
+}
+
+/* Divider line */
+.divider {
+  width: 60%;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.35);
+  margin-bottom: 1.25rem;
+}
+
+/* Description */
+.cardDesc {
+  font-family: var(--font-sora);
+  font-weight: 400;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  letter-spacing: 0.12em;
+  color: #111;
+  max-width: 90%;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .card {
+    padding: 2rem 1.5rem;
+  }
+
+  .divider {
+    width: 70%;
+  }
+}

@@ -1,0 +1,69 @@
+.wrapper {
+  margin-top: 60px;
+}
+
+.tableContainer {
+  overflow-x: auto;
+  border-radius: 1rem;
+  background: #162224;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table thead {
+  background: #007f7a;
+}
+
+.table th {
+  padding: 16px;
+  font-family: var(--font-sora);
+  font-weight: 600;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.table .attributeCol {
+  text-align: left ;
+  font-family: var(--font-trajanpro) ;
+  font-size: 1.5rem;
+}
+
+.table td {
+  padding: 14px 16px;
+  font-family: var(--font-sora);
+  font-size: 1rem;
+  color: #cfd8d7;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.featureName {
+  text-align: left;
+}
+
+.iconCell {
+  text-align: center;
+  font-weight: 600;
+}
+
+.sectionRow td {
+  background: #1b2a2d;
+  font-weight: 600;
+  color: #ffffff;
+  padding: 18px 16px;
+  border-bottom: none;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .table th,
+  .table td {
+    padding: 12px;
+    font-size: 13px;
+  }
+}

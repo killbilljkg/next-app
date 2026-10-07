@@ -1,0 +1,294 @@
+/* .swcontainer {
+    max-width: 1440px;
+    padding: clamp(1.25rem, 4vw, 3rem);;
+    margin-inline: auto;
+} */
+
+.wrapper {
+    position: relative;
+    width: 100%;
+    background-color: #0f1211;
+}
+
+.videocontainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.videobg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.6;
+}
+
+.videooverlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.505);
+    z-index: 1;
+    /* border-radius: 20px; */
+}
+
+.contentScroll {
+  position: relative;
+  z-index: 10;
+}
+
+.section1 {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  min-height: calc(100vh - 96px);
+  padding-top: calc(96px + 6rem);
+  padding-bottom: 7rem;
+}
+
+.heroGrid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  grid-template-rows: auto auto;
+  column-gap: 4rem;
+  row-gap: 2.5rem;
+  /* padding-bottom: 3em; */
+  align-items: start;
+  /* justify-items: center; */
+}
+
+.heroH1 {
+    color: #ffffff;
+    font-size: 4rem;
+    line-height: 1.3;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    font-family: var(--font-trajanpro);
+    font-weight: 700;
+}
+
+.glasscard {
+  /* background: radial-gradient(
+  rgba(255, 255, 255, 0.10),
+  rgba(255, 255, 255, 0.10)
+  ); */
+  /* 1. Translucent glass fill */
+  background: rgba(255, 255, 255, 0.12);
+
+  backdrop-filter: blur(08px);
+  /* -webkit-backdrop-filter: blur(15rem); */
+  padding: 3rem;
+  border-radius: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  color: white;
+  max-width: 600px;
+  justify-self: center;
+}
+
+.pText {
+    font-size: 20px;
+    line-height: 1.8;
+    letter-spacing: 3.6px;
+    font-family: var(--font-sora);
+    font-weight: 400;
+}
+
+.heroTitle {
+  grid-column: 1 / 2;
+  grid-row: 1;
+}
+
+.heroButtons {
+  grid-column: 1 / 2;
+  grid-row: 2;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.heroGlass {
+  grid-column: 2 / 3;
+  grid-row: 2;
+}
+
+.neonGreen {
+    color: #C2EA9C;
+}
+
+
+.section2 {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding-bottom: 8rem;
+}
+
+.section2Grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 8rem;
+  align-items: start;
+}
+
+.section2Left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2.5rem;
+}
+
+.section2Right {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+/* <= 1024px */
+@media (max-width: 1024px) {
+  .section2Grid {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+}
+
+/* <= 768px */
+@media (max-width: 768px) {
+  .section2Grid {
+    gap: 3rem;
+  }
+}
+
+/* <= 480px */
+@media (max-width: 480px) {
+  .section2Grid {
+    gap: 2rem;
+  }
+}
+
+
+
+@media (max-width: 1024px) {
+
+  .heroGrid {
+    grid-template-columns: 1fr;
+    row-gap: 3rem;
+  }
+
+  /* Title */
+  .heroTitle {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  /* Buttons */
+  .heroButtons {
+    grid-column: 1;
+    grid-row: 2;
+    flex-wrap: wrap;
+  }
+
+  /* Glass card */
+  .heroGlass {
+    grid-column: 1;
+    grid-row: 3;
+    display: flex;
+    justify-content: center;
+    justify-self: start;
+  }
+
+  .glasscard {
+    max-width: 680px;  /* 👈 IMPORTANT */
+    width: 100%;
+  }
+
+  .heroH1 {
+    font-size: clamp(2.6rem, 6vw, 3.6rem);
+  }
+}
+
+@media (max-width: 600px) {
+  .glasscard {
+    padding: 2rem;
+  }
+
+  .pText {
+    font-size: 18px;
+    letter-spacing: 2px;
+  }
+}
+
+
+/* ===============================
+   Timeline core
+================================ */
+.timeline {
+  position: relative;
+  padding-left: 2rem;
+  margin-top: 2rem;
+}
+
+.timelineContent {
+  font-family: var(--font-sora);
+  font-weight: 400;
+  letter-spacing: 2px;
+  line-height: 2rem;
+  font-size: 1rem;
+}
+
+.timelineBadge {
+  background-color: #ffffff4b;
+  padding: 4px 8px;
+  border-radius: 10px;
+}
+
+/* ADDED */
+.timelineLine {
+  position: absolute;
+  left: 6px;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background-color: #B1F0E0;
+  transform-origin: top;
+}
+
+/* CHANGED: ensure hidden before GSAP */
+.timelineItem {
+  position: relative;
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+  opacity: 0;
+}
+
+.timelineItem:last-child {
+  margin-bottom: 0;
+}
+
+.timelineDot {
+  
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #B1F0E0;
+  flex-shrink: 0;
+  margin-top: 0.35rem;
+}
+
+.comingsoon {
+  color:#B1F0E0
+}
+
+/* RESPONSIVE SAFETY */
+@media (max-width: 900px) {
+  .timeline {
+    padding-left: 1.5rem;
+  }
+}

@@ -1,0 +1,279 @@
+.wrapper {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  background: #161510;
+}
+
+.storycard,
+.visioncard,
+.missioncard {
+  height: 100vh;
+  border-radius: 5rem 5rem 0 0;
+}
+
+
+.storycard {
+    background-color: #d3e4e6;
+    padding: 80px 0;
+    
+}
+
+.storygrid {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 40px;
+}
+
+.cardTitle {
+    font-family: var(--font-trajanpro);
+    font-size: 4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.cardDesc {
+    font-family: var(--font-sora);
+    font-size: 1.4rem;
+    font-weight: 400;
+    letter-spacing: 1.8px;
+}
+
+/* .highlight {
+    color: rgba(99, 127, 74, 1);
+    text-decoration: underline;
+    font-weight: 600;
+} */
+
+.highlight {
+    background: linear-gradient(135deg, rgba(99,127,74,0.15), rgba(99,127,74,0.35));
+    color: rgba(99, 127, 74, 1);
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-weight: 600;
+    display: inline-block;
+    text-decoration: underline;
+}
+
+.storyflex {
+    display: flex;
+    justify-content: space-between;
+    gap: 8rem;
+    align-items: stretch;
+}
+
+
+
+
+.leftinfo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.rightimg {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.imageWrap {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 19/6;
+    flex: 1;              
+    overflow: hidden;     
+    border-radius: 0;     
+}
+
+.imageWrap img {
+    object-fit: cover;   
+}
+
+@media screen and (max-width: 1024px) {
+    .storycard {
+        padding: 60px 4%;
+    }
+    
+    .cardTitle {
+        font-size: 4rem;
+    }
+
+    .storyflex {
+        gap: 40px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .storycard {
+        padding: 50px 30px;
+    }
+
+    .storyflex {
+        flex-direction: column; 
+    }
+
+    .rightimg {
+        order: -1;
+        width: 100%;
+    }
+
+    .leftinfo {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .storycard {
+        padding: 40px 20px;
+    }
+
+    .cardTitle {
+        font-size: 3rem;
+        margin-bottom: 10px;
+    }
+
+    .rightimg {
+        display: none;
+    }
+
+    .storycard,
+    .visioncard,
+    .missioncard {
+    border-radius: 2rem 2rem 0 0;
+    }
+
+}
+
+.visioncard {
+    background-color: #B1C6C7; 
+    color: #1a1a1a;
+    padding: 80px 0;
+}
+
+.visiongrid {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.visionflex {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.descwrap {
+    max-width: 600px;
+}
+
+.visionimg {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    aspect-ratio: 21 / 9;
+    overflow: hidden;
+}
+
+.visionimg .video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+@media screen and (max-width: 1024px) {
+    .visiongrid {
+        gap: 40px;
+    }
+}
+
+/* Tablet (Max Width 768px) */
+@media screen and (max-width: 768px) {
+    .visionflex {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .visionimg img {
+        aspect-ratio: 4/3;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .visioncard {
+        padding: 40px 20px;
+    }
+}
+
+.missioncard {
+    background-color: #008584;
+    box-sizing: border-box;
+    color: #1a1a1a;
+    padding: 80px 0;
+}
+
+.missiongrid {
+    display: flex;
+    flex-direction: column;
+    gap: 60px; 
+}
+
+.missionflex {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+
+.missionimg {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    aspect-ratio: 21 / 9;
+    overflow: hidden;
+}
+
+.missionimg img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+
+@media screen and (max-width: 1024px) {
+    .missioncard {
+        padding: 60px 4%;
+    }
+
+    .missiongrid {
+        gap: 40px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .missionflex {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .missionimg img {
+        aspect-ratio: 4/3;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .missioncard {
+        padding: 40px 20px;
+    }
+}
+
+.missionTitle, .missionDesc {
+    color: #fff;
+}

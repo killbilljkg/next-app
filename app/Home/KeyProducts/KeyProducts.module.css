@@ -1,0 +1,89 @@
+.keyProducts {
+    width: 100%;
+    padding: 80px 0;
+}
+
+.sectionWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+}
+
+.title {
+    font-family: var(--font-trajanpro);
+    font-weight: 700;
+    font-size: 3rem;
+    text-transform: uppercase;
+    line-height: 1.15;
+}
+
+@media (max-width: 1024px) {
+  .title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.6rem;
+  }
+}
+
+.description {
+    font-family: var(--font-sora);
+    font-weight: 400;
+    font-size: 1rem;
+    letter-spacing: 3px;
+    line-height: 1.7;
+    max-width: 50rem;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .description {
+    font-size: 0.95rem;
+    line-height: 1.65;
+  }
+}
+
+@media (max-width: 480px) {
+  .description {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+}
+
+.productGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+@media (max-width: 1024px) {
+  .productGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .productGrid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .productGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+

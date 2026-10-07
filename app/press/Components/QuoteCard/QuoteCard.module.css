@@ -1,0 +1,117 @@
+/* .card {
+  border-radius: 1rem;
+  padding: 2rem 1rem;
+  text-align: start;
+  max-width: 420px;
+  width: 100%;
+}
+
+.title {
+  font-family: var(--font-trajanpro);
+  font-size: 1rem;
+  font-weight: 700;
+  color: #111;
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+}
+
+.description {
+    font-family: var(--font-sora);
+    font-weight: 400;
+    color: #333;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin: 0 auto;
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 2.25rem 1.75rem;
+  }
+
+  .title {
+    font-size: 1rem;
+  }
+} */
+
+
+.card {
+  position: relative;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 2.5rem 2.5rem 2.25rem;
+  min-height: 360px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.06),
+    0 4px 10px rgba(0, 0, 0, 0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: start;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 18px 40px rgba(0, 0, 0, 0.12),
+    0 8px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* Quote text */
+.quote {
+  font-family: var(--font-sora);
+  font-size: 0.95rem;
+  line-height: 1.9;
+  letter-spacing: 2px;
+  color: #111;
+  max-width: 32ch;
+}
+
+/* Author block */
+.author {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+/* Avatar */
+.avatarWrap {
+  position: relative;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.avatar {
+  object-fit: cover;
+}
+
+/* Name + role */
+.authorText {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+  gap: 0.5rem;
+
+}
+
+.name {
+  font-family: var(--font-trajanpro);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #111;
+  text-transform: uppercase;
+}
+
+.role {
+  font-family: var(--font-sora);
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  color: #008584;
+  /* text-transform: uppercase; */
+}

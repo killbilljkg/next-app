@@ -1,0 +1,130 @@
+:root {
+  --button-transition-duration: 0.4s;
+  --button-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  --button-blob-icon-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' fill='none' viewBox='0 0 10 10'%3E%3Cpath fill='%23222F30' d='M7.703 5.8H.398V4.6h7.305l-3.36-3.36.855-.84 4.8 4.8-4.8 4.8-.855-.84 3.36-3.36Z'/%3E%3C/svg%3E");
+  --button-blob-icon-image-hover: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' fill='none' viewBox='0 0 10 10'%3E%3Cpath fill='%23fff' d='M7.703 5.8H.398V4.6h7.305l-3.36-3.36.855-.84 4.8 4.8-4.8 4.8-.855-.84 3.36-3.36Z'/%3E%3C/svg%3E");
+}
+
+
+.buttonLink {
+    all: unset;                /* nukes all browser defaults */
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline-flex;
+    font-weight: 400;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    text-align: left;
+    -webkit-text-decoration: none;
+    text-decoration: none;
+    user-select: none;
+    align-items: stretch;
+    background: transparent;
+    border-radius: 0;
+    height: 48px;
+    width: fit-content;
+}
+
+.textWrap {
+    display: flex;
+    align-items: center;
+    background: #008584;
+    border-radius: 12px 0 0 12px;
+    font-family: var(--font-sora);
+    color: #fff;
+    display: inline-flex;
+    font-size: max(.75rem, min(calc(.75rem + .002 * (100vw - 27.5rem)), .875rem));
+    justify-content: flex-start;
+    letter-spacing: 0;
+    line-height: 1;
+    margin-right: 16px;
+    overflow: visible;
+    padding: 8px 8px 8px 20px;
+    position: relative;
+    text-transform: uppercase;
+    transform: scaleX(1);
+    transform-origin: center left;
+    transition:
+    transform var(--button-transition-duration, 0.35s)
+    var(--button-transition-timing-function, ease);
+}
+
+.leftSvg {
+    background: transparent;
+    display: block;
+    top: 0;
+    right: -16px;
+    bottom: 0;
+    position: absolute;
+    width: 18px;
+    height: 100%;
+}
+
+.buttonLink svg {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.buttonLink .iconWrap {
+    background-color: transparent;
+    display: inline-flex;
+    overflow: hidden;
+    padding: 10px;
+    position: relative;
+    width: 51px;
+    height: 100%;
+    transform: scale(1);
+    transform-origin: right center ;
+    transition:
+    transform var(--button-transition-duration, 0.35s);
+    transition-property: transform;
+    transition-timing-function: var(--button-transition-timing-function);
+}
+
+
+.iconWrap::before,
+.iconWrap::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 10px 10px;
+    z-index: 2;
+    transition:
+    transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.iconWrap::before {
+  background-image: var(--button-blob-icon-image);
+  transform: translateX(0);
+}
+
+.iconWrap::after {
+  background-image: var(--button-blob-icon-image-hover);
+  transform: translateX(-100%);
+}
+
+.buttonLink:hover .iconWrap::before {
+  transform: translateX(100%);
+}
+
+.buttonLink:hover .iconWrap::after {
+  transform: translateX(0);
+}
+
+
+.buttonLink:hover .textWrap {
+    transform: scaleX(1.03);
+}
+
+.buttonLink:hover .iconWrap {
+    transform: scaleX(0.85);
+}
+

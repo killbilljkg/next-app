@@ -1,0 +1,105 @@
+
+.ProofPoints {
+  width: 100%;
+  padding: 80px 0;
+  position: relative;
+  background-image: url("/ProofPoint.webp");
+  background-size: 100% auto;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 1024px) {
+  .ProofPoints {
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+
+.sectionWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    text-align: center;
+}
+
+.title {
+    font-family: var(--font-trajanpro);
+    font-weight: 700;
+    font-size: 3rem;
+    text-transform: uppercase;
+    line-height: 1.15;
+}
+
+@media (max-width: 1024px) {
+  .title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.6rem;
+  }
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; 
+  gap: 2rem;
+  margin: 0 auto;
+}
+
+
+.grid > * {
+
+  width: calc((100% - 4rem) / 3); 
+  box-sizing: border-box;
+}
+
+
+@media (max-width: 1024px) {
+  .grid > * {
+    width: calc((100% - 2rem) / 2);
+  }
+}
+
+
+@media (max-width: 768px) {
+  .grid > * {
+    width: 100%;
+  }
+}
+
+.description {
+    font-family: var(--font-sora);
+    font-weight: 400;
+    font-size: 1rem;
+    letter-spacing: 3px;
+    line-height: 1.7;
+    max-width: 50rem;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .description {
+    font-size: 0.95rem;
+    line-height: 1.65;
+  }
+}
+
+@media (max-width: 480px) {
+  .description {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+}

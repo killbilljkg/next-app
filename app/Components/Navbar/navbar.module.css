@@ -1,0 +1,380 @@
+/* Variables for consistency */
+:root {
+  --color-dark: #1C2826;
+  --color-light: #E8EAE9;
+  --color-text: #44403c; /* stone-700 equivalent */
+}
+
+
+/* Main Navbar Container */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: none;
+  font-family: var(--font-sora);
+  font-weight: 400;
+  max-width: 90vw;
+  margin: 0 auto;
+
+  /* background-color: aqua; */
+}
+
+/* Desktop Styles (Large Screens) */
+@media (min-width: 1024px) {
+  .navbar {
+    padding: 2rem;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+/* =========================================
+   Pill Components (Shared)
+   ========================================= */
+.pill {
+  pointer-events: auto;
+  background-color: rgba(232, 234, 233, 0.9);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  /* transition: transform .02s ease; */
+  height: 3rem;
+}
+
+.Logopill {
+  pointer-events: auto;
+  background-color: rgba(232, 234, 233, 0.9);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  height: 3rem;
+  padding: 0.625rem 1.25rem;
+}
+
+/* Logo Section */
+.logoGroup {
+  width: 8rem;   
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+
+.logoGroup img {
+  width: 100%;
+  height: auto;         
+}
+
+
+
+/* =========================================
+   Desktop Specific Elements
+   ========================================= */
+.desktopLogoPill {
+  display: none;
+  /* padding: 0.625rem 0; */
+  cursor: pointer;
+}
+
+.desktopNavPill {
+  display: none;
+  padding: 0.2rem;
+  padding-left: 2rem;
+  gap: 1.5rem;
+}
+
+.navLink {
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #111; 
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.navLink:hover {
+  color: #1c1917; /* stone-900 */
+}
+
+.ctaButton {
+  background-color: #008584;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.75rem 1.5rem;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.ctaButton:hover {
+  background-color: black;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 1024px) {
+  .desktopLogoPill,
+  .desktopNavPill {
+    display: flex;
+  }
+}
+
+/* =========================================
+   Mobile Specific Elements
+   ========================================= */
+.mobilePill {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 0.5rem;
+  height: 56px;
+}
+
+.menuButton {
+  background-color: #1C2826;
+  color: #A3B8B0;
+  padding: 0.75rem;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.menuButton:hover {
+  background-color: black;
+  color: white;
+  transform: scale(1.05);
+}
+
+.menuButton:active {
+  transform: scale(0.95);
+}
+
+@media (min-width: 1024px) {
+  .mobilePill {
+    display: none;
+  }
+}
+
+/* =========================================
+   Mobile Menu Overlay
+   ========================================= */
+.overlay {
+  position: fixed;
+  inset: 10;
+  border-radius: 20px;
+  z-index: 60;
+  background-color: var(--color-dark);
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.overlayBackground {
+  position: absolute;
+  inset: 0;
+  opacity: 0.03;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+
+
+.menuLinks {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3rem;
+  z-index: 10;
+  padding: 0 1rem;
+}
+
+@media (min-width: 768px) {
+  .menuLinks {
+    gap: 0.5rem;
+  }
+}
+
+.menuLinkItem {
+  font-size: 2rem;
+  font-weight: 400;
+  color: white;
+  text-decoration: none;
+  letter-spacing: -0.025em;
+  transition: color 0.3s;
+  transform: translateY(20%);
+  opacity: 0;
+  cursor: pointer;
+  font-family: var(--font-sora);
+  font-weight: 400;
+}
+
+@media (min-width: 768px) {
+  .menuLinkItem {
+    font-size: 3rem;
+  }
+}
+
+.menuLinkItem:hover {
+  color: #A3B8B0;
+}
+
+.menuFooter {
+  padding-bottom: 3rem;
+  text-align: center;
+  z-index: 10;
+  transform: translateY(20%);
+  opacity: 0;
+}
+
+.emailLink {
+  color: white;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 0.25rem;
+  font-size: 1.5rem;
+  letter-spacing: 0.025em;
+  transition: color 0.2s;
+  font-family: var(--font-sora);
+}
+
+.emailLink:hover {
+  color: white;
+}
+
+.mobileMenu {
+  position: fixed;
+  inset: 10px; /* This creates the card effect */
+  z-index: 40; /* Behind navbar (50), so Close button works */
+  background: #1c2826;
+  border-radius: 20px;
+  transform: translateY(-110%);
+  
+  /* REMOVED: transform: translateY(-110%);  <-- CAUSES CONFLICT */
+  /* REMOVED: pointer-events: none; <--- HANDLED BY GSAP */
+  
+  /* Optional: keeps it hidden before JS loads to prevent flash */
+  /* visibility: hidden;  */
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* Dropdown wrapper */
+.dropdown {
+  position: relative;
+}
+
+/* Dropdown panel */
+.dropdownMenu {
+  position: absolute;
+  top: 120%;
+  left: 0;
+  background: white;
+  border-radius: 12px;
+  padding: 0.75rem;
+  min-width: 180px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.25s ease;
+  z-index: 100;
+}
+
+/* Show on hover */
+.dropdown:hover .dropdownMenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Dropdown links */
+.dropdownItem {
+  display: block;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #111;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.dropdownItem:hover {
+  background: #f2f2f2;
+}
+
+
+.menuSectionLabel {
+  margin-top: 1.5rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #A3B8B0;
+}
+
+.activeLink {
+  color: #008584;
+  position: relative;
+}
+
+.activeLink::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background-color: #008584;
+    /* animation */
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: underlineIn 0.3s ease forwards;
+  opacity: 0;
+}
+
+@keyframes underlineIn {
+  from {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+  to {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+
+
+.activeDropdownItem {
+  background: #f2f2f2;
+  font-weight: 600;
+}
+
+.activeMenuLink {
+  color: #A3B8B0;
+}

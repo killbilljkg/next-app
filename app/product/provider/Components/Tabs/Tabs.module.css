@@ -1,0 +1,55 @@
+.wrapper {
+  margin: 40px auto;
+}
+
+.tabsHeader {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* Base button */
+.button {
+  position: relative;
+  flex: 1;
+  padding: 14px;
+  border-radius: 999px;
+  border: 2px solid #ccc;
+  background: white;
+  cursor: pointer;
+  overflow: hidden;
+
+  font-family: var(--font-trajanpro);
+  font-weight: 400;
+  font-size: 1rem;
+  color: black;
+  z-index: 1;
+}
+
+/* Teal fill layer */
+.button::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: teal;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+  z-index: -1;
+}
+
+/* Active state */
+.active {
+  color: white;
+  border-color: teal;
+}
+
+/* Animate fill */
+.active::before {
+  transform: scaleX(1);
+}
+
+.content {
+  padding: 20px;
+  /* border: 1px dashed #ccc; */
+}

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 450">
+  <defs>
+    <linearGradient id="bg" gradientUnits="userSpaceOnUse"
+      gradientTransform="matrix(1 0 0 -1 0 451.28)"
+      x1="225" y1="371.28" x2="225" y2="1.28">
+      <stop offset=".59" stop-color="#012436"/>
+      <stop offset="1" stop-color="#052d43"/>
+    </linearGradient>
+  </defs>
+
+  <path
+    d="M450 45v360c0 24.853-20.147 45-45 45H45c-24.853 0-45-20.147-45-45V45C0 20.147 20.147 0 45 0h360c24.853 0 45 20.147 45 45z"
+    fill="url(#bg)"
+  />
+
+  <path
+    d="M263 148v184a8 8 0 0 1-8 8h-34a8 8 0 0 1-8-8V209l-92.6 127.7a8 8 0 0 1-6.48 3.3H83.68a8 8 0 0 1-6.48-12.69l133.4-184a8 8 0 0 1 6.48-3.31H255a8 8 0 0 1 8 8Z"
+    fill="#fff"
+  />
+
+  <path d="M353 114v26l-30 30h-26a4 4 0 0 1-4-4v-22a4 4 0 0 1 4-4h26v-26a4 4 0 0 1 4-4h22a4 4 0 0 1 4 4Z" fill="#fff"/>
+  <path d="M353 174v22a4 4 0 0 1-4 4h-22a4 4 0 0 1-4-4v-22a4 4 0 0 1 4-4h22a4 4 0 0 1 4 4Z" fill="#fff"/>
+  <path d="M383 144v22a4 4 0 0 1-4 4h-22a4 4 0 0 1-4-4v-22a4 4 0 0 1 4-4h22a4 4 0 0 1 4 4Z" fill="#fff"/>
+</svg>

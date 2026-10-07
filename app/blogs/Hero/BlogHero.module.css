@@ -1,0 +1,199 @@
+
+.swcontainer {
+    max-width: 1440px;
+    padding: clamp(1.25rem, 4vw, 3rem);;
+    margin: 0 auto;
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding-top: calc(96px + 6rem);
+  display: flex;
+  align-items: flex-end;
+  /* padding-bottom: 4rem; */
+}
+
+
+
+.bgWrap {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
+.bgImage {
+  object-fit: cover;
+  object-position: center;
+}
+
+
+.heroGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+  row-gap: 4rem;
+  align-items: start;
+  /* column-gap: 4rem; */
+}
+
+
+.heroH1 {
+  color: #111;
+  font-size: clamp(2.2rem, 4vw, 4rem);
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  font-family: var(--font-trajanpro);
+  font-weight: 400;
+}
+
+/* .glasscard {
+  background: radial-gradient(
+  rgba(255, 255, 255, 0.12),
+  rgba(255, 255, 255, 0)
+  );
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  padding: clamp(1.75rem, 4vw, 3rem);
+  border-radius: clamp(1.25rem, 3vw, 2rem);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: #111;
+  width: 100%;
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+} */
+
+.glasscard {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.55),
+      rgba(255, 255, 255, 0.35)
+    );
+
+  backdrop-filter: blur(22px) saturate(120%);
+  -webkit-backdrop-filter: blur(22px) saturate(120%);
+
+  padding: clamp(1.75rem, 4vw, 3rem);
+  border-radius: clamp(1.25rem, 3vw, 2rem);
+
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  color: #111;
+
+  width: 100%;
+
+  box-shadow:
+    0 16px 40px rgba(0, 0, 0, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.75);
+}
+
+
+.pText {
+  font-size: clamp(0.95rem, 2.5vw, 1.125rem);
+  line-height: 1.8;
+  letter-spacing: clamp(0.04em, 0.3vw, 0.08em);
+  font-family: var(--font-sora);
+  font-weight: 400;
+}
+
+
+.heroTitle {
+  grid-row: 1;
+}
+
+
+.heroGlass {
+  grid-row: 2;
+  display: flex;
+  justify-content: center;
+}
+
+.glasscard {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.imageWrap {
+  position: relative;
+  max-width: 80%;
+  height: 220px;              
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+
+.cardImage {
+  object-fit: cover;
+  object-position: center;
+  
+}
+
+
+@media (max-width: 1024px) {
+
+  .heroH1 {
+    font-size: clamp(2.6rem, 6vw, 3.6rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .glasscard {
+    grid-template-columns: 1fr;   /* stack */
+    gap: 1.5rem;
+  }
+
+  .imageWrap {
+    max-width: 100%;              /* full width */
+    height: 200px;                /* slightly tighter for mobile */
+  }
+}
+
+@media (max-width: 600px) {
+  .glasscard {
+    padding: 2rem;
+  }
+
+  .pText {
+    font-size: 16px;
+    letter-spacing: 2px;
+  }
+}
+
+
+.heroDivider {
+  margin-top: clamp(5rem, 12vw, 8rem);
+  text-align: center;
+}
+
+
+.title {
+    font-family: var(--font-trajanpro);
+    font-weight: 700;
+    font-size: 3rem;
+    text-transform: uppercase;
+    line-height: 1.15;
+}
+
+@media (max-width: 1024px) {
+  .title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.6rem;
+  }
+}

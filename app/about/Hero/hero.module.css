@@ -1,0 +1,150 @@
+
+.swcontainer {
+    max-width: 1440px;
+    padding: clamp(1.25rem, 4vw, 3rem);;
+    margin: 0 auto;
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding-top: calc(96px + 6rem);
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 4rem;
+}
+
+
+
+.bgWrap {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
+.bgImage {
+  object-fit: cover;
+  object-position: center;
+  transform: scaleX(-1);
+}
+
+
+.heroGrid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  align-items: start;
+  column-gap: 4rem;
+}
+
+
+.heroH1 {
+  color: #111;
+  font-size: clamp(2.2rem, 4vw, 4rem);
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  font-family: var(--font-trajanpro);
+  font-weight: 400;
+}
+
+.glasscard {
+    /* background: radial-gradient(
+  rgba(255, 255, 255, 0.15),
+  rgba(255, 255, 255, 0.15)
+  ); */
+
+  /* backdrop-filter: blur(15px); */
+  /* -webkit-backdrop-filter: blur(15px); */
+  background: rgba(255, 255, 255, 0.12);
+
+  backdrop-filter: blur(08px);
+
+  padding: clamp(1.75rem, 4vw, 3rem);
+  border-radius: clamp(1.25rem, 3vw, 2rem);
+
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: #111;
+
+  max-width: 36rem;
+  width: 100%;
+
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+
+/* .pText {
+    font-size: 18px;
+    line-height: 1.8;
+    letter-spacing: 3.6px;
+    font-family: var(--font-sora);
+    font-weight: 400;
+} */
+
+.pText {
+  font-size: clamp(0.95rem, 2.5vw, 1.125rem);
+  line-height: 1.8;
+  letter-spacing: clamp(0.04em, 0.3vw, 0.08em);
+  font-family: var(--font-sora);
+  font-weight: 400;
+}
+
+
+.heroTitle {
+  grid-column: 1 / -1; 
+  grid-row: 1;
+}
+
+
+.heroGlass {
+  grid-column: 2 / 3;
+  grid-row: 2;
+}
+
+
+@media (max-width: 1024px) {
+
+  .heroGrid {
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+  }
+
+
+  .heroTitle {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .heroGlass {
+    grid-column: 1;
+    grid-row: 3;
+    display: flex;
+    justify-content: center;
+    justify-self: start;
+  }
+
+  .glasscard {
+    max-width: 680px;
+    width: 100%;
+  }
+
+  .heroH1 {
+    font-size: clamp(2.6rem, 6vw, 3.6rem);
+  }
+}
+
+@media (max-width: 600px) {
+  .glasscard {
+    padding: 2rem;
+  }
+
+  .pText {
+    font-size: 16px;
+    letter-spacing: 2px;
+  }
+}
+
+
+

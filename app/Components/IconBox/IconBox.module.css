@@ -1,0 +1,83 @@
+.card {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  padding: clamp(2.5rem, 4vw, 3.5rem);
+
+  border-radius: 2.5rem;
+
+  /* Radial white glass gradient */
+  background: radial-gradient(
+    120% 120% at 50% 0%,
+    rgba(255, 255, 255, 0.85) 0%,
+    rgba(255, 255, 255, 0.65) 80%
+  );
+
+  /* Frosted glass */
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  border: 1px solid rgba(255, 255, 255, 0.4);
+
+  box-shadow:
+    0 30px 60px rgba(0, 0, 0, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+
+  text-align: center;
+}
+
+/* ICON CIRCLE */
+.iconWrap {
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 2rem;
+  border-radius: 50%;
+  /* background: #D6FDFF; */
+  background: var(--icon-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #111;
+}
+
+.icon {
+  object-fit: contain;
+}
+
+/* .iconWrap {
+  background: linear-gradient(180deg, #e9fbf6, #d8f2ec);
+} */
+
+
+
+/* TEXT */
+.description {
+  font-family: var(--font-sora);
+  font-size: clamp(0.95rem, 2.5vw, 1.05rem);
+  line-height: 1.9;
+  letter-spacing: 0.18em;
+  text-transform: lowercase;
+
+  color: #111;
+}
+
+/* =====================
+   RESPONSIVE
+   ===================== */
+
+@media (max-width: 600px) {
+  .card {
+    padding: 2.25rem;
+    border-radius: 2rem;
+  }
+
+  .iconWrap {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 1.5rem;
+  }
+
+  .description {
+    letter-spacing: 0.14em;
+  }
+}
